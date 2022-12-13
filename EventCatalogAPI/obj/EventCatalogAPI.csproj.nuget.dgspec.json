@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Pivot\\Projects\\EventBrite\\EventCatalogAPI\\EventCatalogAPI.csproj": {}
+    "D:\\Github\\EventBrite\\EventCatalogAPI\\EventCatalogAPI.csproj": {}
   },
   "projects": {
-    "C:\\Pivot\\Projects\\EventBrite\\EventCatalogAPI\\EventCatalogAPI.csproj": {
+    "D:\\Github\\EventBrite\\EventCatalogAPI\\EventCatalogAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Pivot\\Projects\\EventBrite\\EventCatalogAPI\\EventCatalogAPI.csproj",
+        "projectUniqueName": "D:\\Github\\EventBrite\\EventCatalogAPI\\EventCatalogAPI.csproj",
         "projectName": "EventCatalogAPI",
-        "projectPath": "C:\\Pivot\\Projects\\EventBrite\\EventCatalogAPI\\EventCatalogAPI.csproj",
-        "packagesPath": "C:\\Users\\v-swchop\\.nuget\\packages\\",
-        "outputPath": "C:\\Pivot\\Projects\\EventBrite\\EventCatalogAPI\\obj\\",
+        "projectPath": "D:\\Github\\EventBrite\\EventCatalogAPI\\EventCatalogAPI.csproj",
+        "packagesPath": "C:\\Users\\sumam\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\EventBrite\\EventCatalogAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\v-swchop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sumam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,6 +45,24 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.17.0, )"
