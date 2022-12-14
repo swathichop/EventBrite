@@ -1,11 +1,88 @@
 {
   "Version": 1,
-  "Hash": "qhHl8vT3i6t6dRg2MjuN2ncj6rJaE4vkvZueuFxPv+o=",
+  "Hash": "EvZLwhtpdlHFX2HONam2VMFwcBD46MvSMOxVWBBnuKA=",
   "Source": "EventCatalogAPI",
   "BasePath": "_content/EventCatalogAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "EventCatalogAPI\\wwwroot",
+      "Source": "EventCatalogAPI",
+      "ContentRoot": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\",
+      "BasePath": "_content/EventCatalogAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\Pics\\Image1.jpg",
+      "SourceId": "EventCatalogAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\",
+      "BasePath": "_content/EventCatalogAPI",
+      "RelativePath": "Pics/Image1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pics\\Image1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\Pics\\Image2.jpg",
+      "SourceId": "EventCatalogAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\",
+      "BasePath": "_content/EventCatalogAPI",
+      "RelativePath": "Pics/Image2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pics\\Image2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\Pics\\Image3.jpg",
+      "SourceId": "EventCatalogAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\",
+      "BasePath": "_content/EventCatalogAPI",
+      "RelativePath": "Pics/Image3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pics\\Image3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\Pics\\Image4.jpg",
+      "SourceId": "EventCatalogAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\EventCatalogAPI\\wwwroot\\",
+      "BasePath": "_content/EventCatalogAPI",
+      "RelativePath": "Pics/Image4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pics\\Image4.jpg"
+    }
+  ]
 }
