@@ -38,10 +38,10 @@ namespace EventCatalogAPI.Data
                           Address = "1213 Disneyland Dr",
                           City = "Anaheim" ,
                           State = "CA" ,
-                          EventImageUrl = "http://externalcatalogbaseurltobereplaced/api/pic/1" ,
+                          EventImageUrl = "http://externalcatalogbaseurltobereplaced/api/Eventpic/1" ,
                           
-                          //EventStartDateTime=
-                          //EventEndDateTime=
+                          EventStartDateTime=new DateTime(2022,12,26,10,30,0),
+                          EventEndDateTime=new DateTime(2022,12,26,18,30,0),
                           TicketsAvailable = 20 } ,
                 new EventItem{EventTypeId = 2 ,
                            EventOrganizerId = 2 ,
@@ -51,8 +51,10 @@ namespace EventCatalogAPI.Data
                           Address = "Seattle Center",
                           City = "Seattle" ,
                           State = "WA" ,
-                          EventImageUrl = "http://externalcatalogbaseurltobereplaced/api/pic/2" ,
-                          //EventStartDate="12/15/2022",
+                          EventImageUrl = "http://externalcatalogbaseurltobereplaced/api/Eventpic/2" ,
+                            EventStartDateTime=new DateTime(2023,1,3,10,30,0),
+                          EventEndDateTime=new DateTime(2023,1,4,18,30,0),
+                          
                           
                           TicketsAvailable = 25 } ,
                 new EventItem{EventTypeId = 3 ,
@@ -63,8 +65,9 @@ namespace EventCatalogAPI.Data
                           Address = "Art for kids hub",
                           City = "Austin" ,
                           State = "Texas" ,
-                          EventImageUrl = "http://externalcatalogbaseurltobereplaced/api/pic/3" ,
-                         
+                          EventImageUrl = "http://externalcatalogbaseurltobereplaced/api/Eventpic/3" ,
+                           EventStartDateTime=new DateTime(2022,12,26,10,30,0),
+                          EventEndDateTime=new DateTime(2022,12,27,15,30,0),
                           TicketsAvailable = 25 } ,
 
                 new EventItem{ EventTypeId = 3 ,
@@ -75,8 +78,9 @@ namespace EventCatalogAPI.Data
                           Address = "Renton",
                           City = "Renton" ,
                           State = "WA" ,
-                          EventImageUrl = "http://externalcatalogbaseurltobereplaced/api/pic/4" ,
-                         
+                          EventImageUrl = "http://externalcatalogbaseurltobereplaced/api/Eventpic/4" ,
+                           EventStartDateTime=new DateTime(2022,12,26,10,30,0),
+                          EventEndDateTime=new DateTime(2022,12,26,18,30,0),
                           TicketsAvailable = 25 } ,
             };
         }
@@ -85,9 +89,9 @@ namespace EventCatalogAPI.Data
         {
             return new List<EventOrganizer>()
            {
-               new EventOrganizer{Name="Disney"},
-               new EventOrganizer{Name="Seattle Expo"},
-               new EventOrganizer{Name="Theater Arts"}
+               new EventOrganizer{Name="Disney",Desc="Disney"},
+               new EventOrganizer{Name="Seattle Expo",Desc="Seattle Expo"},
+               new EventOrganizer{Name="Theater Arts",Desc = "Theater Arts"}
            };
         }
 

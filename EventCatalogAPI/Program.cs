@@ -16,7 +16,7 @@ using (var scope = app.Services.CreateScope())
 {
     var serviceProviders = scope.ServiceProvider;
     var context = serviceProviders.GetRequiredService<EventCatalogContext>();
-    
+    EventCatalogSeed.Seed(context);
 }
 
 // Configure the HTTP request pipeline.
