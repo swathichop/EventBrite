@@ -80,3 +80,4 @@ D:\Github\EventBrite\EventCatalogAPI\obj\Debug\net6.0\refint\EventCatalogAPI.dll
 D:\Github\EventBrite\EventCatalogAPI\obj\Debug\net6.0\EventCatalogAPI.pdb
 D:\Github\EventBrite\EventCatalogAPI\obj\Debug\net6.0\EventCatalogAPI.genruntimeconfig.cache
 D:\Github\EventBrite\EventCatalogAPI\obj\Debug\net6.0\ref\EventCatalogAPI.dll
+D:\Github\EventBrite\EventCatalogAPI\bin\Debug\net6.0\EventCatalogAPI.staticwebassets.runtime.json

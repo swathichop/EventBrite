@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "qhHl8vT3i6t6dRg2MjuN2ncj6rJaE4vkvZueuFxPv+o=",
+  "Hash": "E9qxq3e1eMPcEUJHrvXPkDzbdgtmXVv7kENDYceJS6c=",
   "Source": "EventCatalogAPI",
   "BasePath": "_content/EventCatalogAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "EventCatalogAPI\\wwwroot",
+      "Source": "EventCatalogAPI",
+      "ContentRoot": "D:\\Github\\EventBrite\\EventCatalogAPI\\wwwroot\\",
+      "BasePath": "_content/EventCatalogAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Github\\EventBrite\\EventCatalogAPI\\wwwroot\\Pics\\Event1.jpg",
+      "SourceId": "EventCatalogAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Github\\EventBrite\\EventCatalogAPI\\wwwroot\\",
+      "BasePath": "_content/EventCatalogAPI",
+      "RelativePath": "Pics/Event1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pics\\Event1.jpg"
+    }
+  ]
 }

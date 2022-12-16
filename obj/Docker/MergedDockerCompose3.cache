@@ -1,0 +1,21 @@
+name: dockercompose931358842630888638
+services:
+  eventcatalogapi:
+    build:
+      context: D:\Github\EventBrite\EventCatalogAPI
+      dockerfile: Dockerfile
+    environment:
+      ConnectionString: Data Source=mssqlserver;Initial Catalog=EventCatalogDb;User
+        Id=sa;Password=ProductApi(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;
+      ExternalBaseUrl: http://localhost:7001
+    image: eventbrite/eventcatalogapi
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "7001"
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose931358842630888638_default
