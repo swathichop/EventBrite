@@ -1,8 +1,8 @@
-name: dockercompose10542420143505171014
+name: dockercompose17831031165718951826
 services:
   eventcatalogapi:
     build:
-      context: C:\Users\srava\source\repos\Team_3\EventBrite\EventCatalogAPI
+      context: C:\Pivot\Projects\EventBrite\EventCatalogAPI
       dockerfile: Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
@@ -21,7 +21,7 @@ services:
       ConnectionString: Data Source=mssqlserver;Initial Catalog=EventCatalogNewDB;User
         Id=sa;Password=ProductApi(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
-      ExternalBaseUrl: https://localhost:7041
+      ExternalBaseUrl: https://localhost:7044
       NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
     image: eventbrite/eventcatalogapi:dev
     labels:
@@ -37,27 +37,27 @@ services:
     ports:
     - mode: ingress
       target: 80
-      published: "7041"
+      published: "7044"
       protocol: tcp
     tty: true
     volumes:
     - type: bind
-      source: C:\Users\srava\source\repos\Team_3\EventBrite\EventCatalogAPI
+      source: C:\Pivot\Projects\EventBrite\EventCatalogAPI
       target: /app
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\srava\source\repos\Team_3\EventBrite\EventCatalogAPI
+      source: C:\Pivot\Projects\EventBrite\EventCatalogAPI
       target: /src
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\srava\vsdbg\vs2017u5
+      source: C:\Users\v-swchop\vsdbg\vs2017u5
       target: /remote_debugger
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\srava\.nuget\packages\
+      source: C:\Users\v-swchop\.nuget\packages\
       target: /root/.nuget/packages
       read_only: true
       bind:
@@ -69,13 +69,13 @@ services:
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\srava\AppData\Roaming/ASP.NET/Https
+      source: C:\Users\v-swchop\AppData\Roaming/ASP.NET/Https
       target: /root/.aspnet/https
       read_only: true
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\srava\AppData\Roaming/Microsoft/UserSecrets
+      source: C:\Users\v-swchop\AppData\Roaming/Microsoft/UserSecrets
       target: /root/.microsoft/usersecrets
       read_only: true
       bind:
@@ -95,6 +95,6 @@ services:
       protocol: tcp
 networks:
   backend:
-    name: dockercompose10542420143505171014_backend
+    name: dockercompose17831031165718951826_backend
   frontend:
-    name: dockercompose10542420143505171014_frontend
+    name: dockercompose17831031165718951826_frontend

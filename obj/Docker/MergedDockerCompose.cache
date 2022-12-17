@@ -1,8 +1,8 @@
-name: dockercompose10542420143505171014
+name: dockercompose17831031165718951826
 services:
   eventcatalogapi:
     build:
-      context: C:\Users\srava\source\repos\Team_3\EventBrite\EventCatalogAPI
+      context: C:\Pivot\Projects\EventBrite\EventCatalogAPI
       dockerfile: Dockerfile
     container_name: eventbriteeventcatalogapi
     depends_on:
@@ -11,7 +11,7 @@ services:
     environment:
       ConnectionString: Data Source=mssqlserver;Initial Catalog=EventCatalogNewDB;User
         Id=sa;Password=ProductApi(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;
-      ExternalBaseUrl: https://localhost:7041
+      ExternalBaseUrl: https://localhost:7044
     image: eventbrite/eventcatalogapi
     networks:
       backend: null
@@ -19,7 +19,7 @@ services:
     ports:
     - mode: ingress
       target: 80
-      published: "7041"
+      published: "7044"
       protocol: tcp
   mssqlserver:
     container_name: eventbritesqlserver
@@ -36,6 +36,6 @@ services:
       protocol: tcp
 networks:
   backend:
-    name: dockercompose10542420143505171014_backend
+    name: dockercompose17831031165718951826_backend
   frontend:
-    name: dockercompose10542420143505171014_frontend
+    name: dockercompose17831031165718951826_frontend

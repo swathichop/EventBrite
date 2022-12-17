@@ -12,9 +12,9 @@ services:
       dockerfile: Dockerfile
     environment:
       ConnectionString: "Data Source=mssqlserver;Initial Catalog=EventCatalogNewDB;User Id=sa;Password=ProductApi(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;"
-      ExternalBaseUrl: https://localhost:7041
+      ExternalBaseUrl: https://localhost:7044
     ports:
-      - "7041:80"
+      - "7044:80"
     container_name: eventbriteeventcatalogapi
     networks:
       - frontend
