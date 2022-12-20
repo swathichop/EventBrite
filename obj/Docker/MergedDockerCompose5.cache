@@ -8,7 +8,7 @@ services:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: EventCatalogAPI
       target: base
-    container_name: eventbriteeventcatalogapi
+    container_name: eventbrite_eventcatalogapi
     depends_on:
       mssqlserver:
         condition: service_started
@@ -81,7 +81,7 @@ services:
       bind:
         create_host_path: true
   mssqlserver:
-    container_name: eventbritesqlserver
+    container_name: eventbrite_sqlserver
     environment:
       ACCEPT_EULA: "true"
       MSSQL_SA_PASSWORD: ProductApi(!)

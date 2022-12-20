@@ -4,7 +4,7 @@ services:
     build:
       context: C:\Users\srava\source\repos\Team_3\EventBrite\EventCatalogAPI
       dockerfile: Dockerfile
-    container_name: eventbriteeventcatalogapi
+    container_name: eventbrite_eventcatalogapi
     depends_on:
       mssqlserver:
         condition: service_started
@@ -22,7 +22,7 @@ services:
       published: "7044"
       protocol: tcp
   mssqlserver:
-    container_name: eventbritesqlserver
+    container_name: eventbrite_sqlserver
     environment:
       ACCEPT_EULA: "true"
       MSSQL_SA_PASSWORD: ProductApi(!)
