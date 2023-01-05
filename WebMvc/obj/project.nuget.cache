@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "DQ8/T/rqvupvHqpi3nsc9BPiNlHXaD9Uw7/xFiOchynC+FxG6yDojGfuohHho+ZyQBmXSB9+vDcwF/nflsSRpQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\WebMvc\\WebMvc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\srava\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}
