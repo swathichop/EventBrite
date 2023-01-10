@@ -246,3 +246,4 @@ C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\refint\EventCatalo
 C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\EventCatalogAPI.pdb
 C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\EventCatalogAPI.genruntimeconfig.cache
 C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\ref\EventCatalogAPI.dll
+D:\Github\EventBrite\EventCatalogAPI\bin\Debug\net6.0\EventCatalogAPI.staticwebassets.runtime.json
