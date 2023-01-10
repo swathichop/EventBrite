@@ -1,20 +1,24 @@
 ﻿namespace WebMvc.Infrastructure
 {
-    public class APIPaths
+    public static class APIPaths
     {
-        public static string GetAllEventTypes(string baseUrl)
+        public static class EventCatalog
         {
-            return $"{baseUrl}/eventtypes";
-        }
-        public static string GetAllEventOrganizers(string baseUrl)
-        {
-            return $"{baseUrl}/eventorganizers";
-        }
+            public static string GetAllEventTypes(string baseUrl)
+            {
+                return $"{baseUrl}/eventtypes";
+            }
+            public static string GetAllEventOrganizers(string baseUrl)
+            {
+                return $"{baseUrl}/eventorganizers";
+            }
 
-        public static string GetAllEventItems(string baseUrl,int page,int take)
-        {
-            return $"{baseUrl}/items?pageIndex={page}&pageSize={take}"; ;
+            public static string GetAllEventItems(string baseUrl, int page, int take)
+            {
+                return $"{baseUrl}/eventitems?pageIndex={page}&pageSize={take}"; 
+            }
         }
+        
        
     }
 }
