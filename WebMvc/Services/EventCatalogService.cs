@@ -69,9 +69,9 @@ namespace WebMvc.Services
             return items;
         }
 
-        public async Task<EventCatalog> GetEventsAsync(int page, int size)
+        public async Task<EventCatalog> GetEventsAsync(int page, int size,int? eventorganizer,int? eventtype)
         {
-            var eventsItemsUri = APIPaths.EventCatalog.GetAllEventItems(_baseUrl, page, size);
+            var eventsItemsUri = APIPaths.EventCatalog.GetAllEventItems(_baseUrl, page, size, eventorganizer, eventtype);
             var datastring = await _httpClient.GetStringAsync(eventsItemsUri);
             return JsonConvert.DeserializeObject<EventCatalog>(datastring);
         }

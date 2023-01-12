@@ -1,7 +1,14 @@
+using WebMvc.Infrastructure;
+using WebMvc.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<IHttpClient, CustomHttpClient>();
+builder.Services.AddTransient<IEventCatalogService, EventCatalogService>();
 
 var app = builder.Build();
 
@@ -20,6 +27,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=EventCatalog}/{action=Index}");
+
+//app.MapRazorPages();
 
 app.Run();

@@ -58,3 +58,10 @@ C:\Pivot\Projects\EventBrite\bin\Debug\EventCatalogAPI.pdb
 C:\Pivot\Projects\EventBrite\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Pivot\Projects\EventBrite\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Pivot\Projects\EventBrite\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Pivot\Projects\EventBrite\bin\Debug\WebMvc.dll
+C:\Pivot\Projects\EventBrite\bin\Debug\WebMvc.deps.json
+C:\Pivot\Projects\EventBrite\bin\Debug\WebMvc.runtimeconfig.json
+C:\Pivot\Projects\EventBrite\bin\Debug\WebMvc.staticwebassets.runtime.json
+C:\Pivot\Projects\EventBrite\bin\Debug\WebMvc.exe
+C:\Pivot\Projects\EventBrite\bin\Debug\Newtonsoft.Json.dll
+C:\Pivot\Projects\EventBrite\bin\Debug\WebMvc.pdb

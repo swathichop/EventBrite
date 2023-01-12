@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "h9JohfopjkWJH6NYPlO4SwRa18lW3IgIzx/UDZEA0AUvoFz9lXV5ebw5m6Ij3myrPuNqhTV/lwEu5QX422XxUw==",
+  "dgSpecHash": "BXKFqrY08AXlNyINlOqrj5B6axhMSmaBQVwiBxy0wXsirkafcP2l+XGBxsdnJFuKuYScB02H0HUzv1HbEJ784Q==",
   "success": true,
-  "projectFilePath": "D:\\Github\\EventBrite\\WebMvc\\WebMvc.csproj",
+  "projectFilePath": "C:\\Pivot\\Projects\\EventBrite\\WebMvc\\WebMvc.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sumam\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
-    "C:\\Users\\sumam\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\v-swchop\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
+    "C:\\Users\\v-swchop\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": []
 }

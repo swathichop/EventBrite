@@ -246,3 +246,8 @@ C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\refint\EventCatalo
 C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\EventCatalogAPI.pdb
 C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\EventCatalogAPI.genruntimeconfig.cache
 C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\ref\EventCatalogAPI.dll
+C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\staticwebassets\msbuild.EventCatalogAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.EventCatalogAPI.props
+C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.EventCatalogAPI.props
+C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.EventCatalogAPI.props
+C:\Pivot\Projects\EventBrite\EventCatalogAPI\obj\Debug\net6.0\staticwebassets.pack.json

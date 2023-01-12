@@ -13,9 +13,30 @@
                 return $"{baseUrl}/eventorganizers";
             }
 
-            public static string GetAllEventItems(string baseUrl, int page, int take)
+            public static string GetAllEventItems(string baseUrl, int page, int take, int? eventorganizer, int? eventtype
+                )
             {
-                return $"{baseUrl}/eventitems?pageIndex={page}&pageSize={take}"; 
+                // return $"{baseUrl}/eventitems?pageIndex={page}&pageSize={take}"; 
+                var preUri = string.Empty;
+                var filterQs = string.Empty;
+                if (eventorganizer.HasValue)
+                {
+                    filterQs = $"eventOrganizerId={eventorganizer.Value}";
+                }
+                if (eventtype.HasValue)
+                {
+                    filterQs = (filterQs == string.Empty) ? $"EventTypeId={eventtype.Value}" :
+                         $"{filterQs}&eventTypeId={eventtype.Value}";
+                }
+                if (string.IsNullOrEmpty(filterQs))
+                {
+                    preUri = $"{baseUrl}/eventitems?pageIndex={page}&pageSize={take}";
+                }
+                else
+                {
+                    preUri = $"{baseUrl}/eventitems/filter?pageIndex={page}&pageSize={take}&{filterQs}";
+                }
+                return preUri;
             }
         }
         
