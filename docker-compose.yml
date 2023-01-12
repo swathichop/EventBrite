@@ -29,7 +29,7 @@ services:
       dockerfile: Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      CatalogUrl: http://catalog
+      EventCatalogUrl: http://eventcatalogapi
       IdentityUrl: http://192.168.1.109:7800
       CallBackUrl: http://localhost:7502
     ports:
@@ -46,7 +46,7 @@ services:
     environment: 
       ACCEPT_EULA: Y
       MSSQL_SA_PASSWORD: ProductApi(!)
-      SA_PASSWORD: ProductApi123(!)
+      SA_PASSWORD: ProductApi(!)
     ports:
       - "1498:1433"
     container_name: eventbritesqlserver
