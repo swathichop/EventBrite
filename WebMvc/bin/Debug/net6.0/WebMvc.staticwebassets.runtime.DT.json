@@ -649,6 +649,14 @@
             },
             "Patterns": null
           },
+          "Eventslogo1.png": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/Eventslogo1.png"
+            },
+            "Patterns": null
+          },
           "fb.psd": {
             "Children": null,
             "Asset": {

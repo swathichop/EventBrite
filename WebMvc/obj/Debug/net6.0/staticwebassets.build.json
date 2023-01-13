@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "212VdRX3ULrUdxK+GdHqYyRB9Je5ETxafuiBkRmPEBQ=",
+  "Hash": "6v6pW5Cx6RQ1cFLSbFUs7yW5QwlYVRX/3ZNYPwkAYvY=",
   "Source": "WebMvc",
   "BasePath": "_content/WebMvc",
   "Mode": "Default",
@@ -1273,6 +1273,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\EventLogo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\WebMvc\\wwwroot\\images\\Eventslogo1.png",
+      "SourceId": "WebMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\WebMvc\\wwwroot\\",
+      "BasePath": "_content/WebMvc",
+      "RelativePath": "images/Eventslogo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Eventslogo1.png"
     },
     {
       "Identity": "C:\\Users\\srava\\source\\repos\\Team_3\\EventBrite\\WebMvc\\wwwroot\\images\\f_icon.png",
