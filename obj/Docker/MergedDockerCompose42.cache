@@ -1,0 +1,98 @@
+name: dockercompose10542420143505171014
+services:
+  eventcatalogapi:
+    build:
+      context: C:\Users\srava\source\repos\Team_3\EventBrite\EventCatalogAPI
+      dockerfile: Dockerfile
+    container_name: eventbriteeventcatalogapi
+    depends_on:
+      mssqlserver:
+        condition: service_started
+    environment:
+      ConnectionString: Data Source=mssqlserver;Initial Catalog=EventCatalogNewDB;User
+        Id=sa;Password=ProductApi(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;
+      ExternalBaseUrl: http://localhost:7044
+    image: eventbrite/eventcatalogapi
+    networks:
+      backend: null
+      frontend: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "7044"
+      protocol: tcp
+  mssqlserver:
+    container_name: eventbritesqlserver
+    environment:
+      ACCEPT_EULA: "true"
+      MSSQL_SA_PASSWORD: ProductApi(!)
+      SA_PASSWORD: ProductApi(!)
+    image: mcr.microsoft.com/mssql/server:latest
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1498"
+      protocol: tcp
+  tokenserver:
+    build:
+      context: C:\Users\srava\source\repos\Team_3\EventBrite\TokenServiceAPI
+      dockerfile: Dockerfile
+    container_name: eventbritetokenservice
+    depends_on:
+      tokensqlserver:
+        condition: service_started
+    environment:
+      ConnectionString: Data Source=tokensqlserver;Initial Catalog=EventTokenServiceDb;User
+        Id=sa;Password=ProductApi(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;
+      MvcClient: http://localhost:7502
+    image: eventbrite/tokenapi
+    networks:
+      backend: null
+      frontend: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "7240"
+      protocol: tcp
+  tokensqlserver:
+    container_name: eventbritetokensqlserver
+    environment:
+      ACCEPT_EULA: "true"
+      MSSQL_SA_PASSWORD: ProductApi(!)
+      SA_PASSWORD: ProductApi(!)
+    image: mcr.microsoft.com/mssql/server:latest
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1438"
+      protocol: tcp
+  webmvc:
+    build:
+      context: C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc
+      dockerfile: Dockerfile
+    container_name: webshopeventbrite
+    depends_on:
+      eventcatalogapi:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      CallBackUrl: http://localhost:7502
+      EventCatalogUrl: http://eventcatalogapi
+      IdentityUrl: http://192.168.5.150:7240
+    image: eventbrite/webmvc
+    networks:
+      frontend: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "7502"
+      protocol: tcp
+networks:
+  backend:
+    name: dockercompose10542420143505171014_backend
+  frontend:
+    name: dockercompose10542420143505171014_frontend

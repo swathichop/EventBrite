@@ -90,3 +90,10 @@ C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\obj\Debug\net6.0\refint\Web
 C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\obj\Debug\net6.0\WebMvc.pdb
 C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\obj\Debug\net6.0\WebMvc.genruntimeconfig.cache
 C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\obj\Debug\net6.0\ref\WebMvc.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\WebMvc\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
