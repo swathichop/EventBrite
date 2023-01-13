@@ -22,6 +22,23 @@ services:
     depends_on:
       - mssqlserver
 
+  tokenserver:
+    image: eventbrite/tokenapi
+    build:
+      context: .\TokenServiceAPI
+      dockerfile: Dockerfile
+    environment:
+      ConnectionString: "Data Source=tokensqlserver;Initial Catalog=TokenServiceDb;User Id=sa;Password=ProductApi123(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;"
+      MvcClient: http://localhost:7510
+    ports:
+      - "7700:80"
+    container_name: eventbritetokenapi
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - tokensqlserver
+
   WebMvc:
     image: eventbrite/webmvc
     build:
@@ -30,6 +47,8 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       EventCatalogUrl: http://eventcatalogapi
+      IdentityUrl: http://172.22.144.1:7700
+      CallBackUrl: http://localhost:7510
     ports:
       - "7510:80"
     container_name: eventwebshop
@@ -37,6 +56,7 @@ services:
       - frontend
     depends_on:
       - eventcatalogapi
+      - tokensqlserver
 
 
   mssqlserver:
@@ -47,5 +67,17 @@ services:
     ports:
       - "1498:1433"
     container_name: eventbritesqlserver
+    networks:
+      - backend
+
+  tokensqlserver:
+    image: "mcr.microsoft.com/mssql/server:latest"
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: ProductApi123(!)
+      SA_PASSWORD: ProductApi123(!)
+    ports:
+      - "1458:1433"
+    container_name: eventstokensqlserver
     networks:
       - backend

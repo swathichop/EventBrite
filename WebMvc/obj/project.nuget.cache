@@ -1,11 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "h9JohfopjkWJH6NYPlO4SwRa18lW3IgIzx/UDZEA0AUvoFz9lXV5ebw5m6Ij3myrPuNqhTV/lwEu5QX422XxUw==",
+  "dgSpecHash": "cVBWLfSkUPi4yzGKXIWYEl14zFTRYzbSVne460taVrrQUxhDu0oSA3j0a1w8wBrRi9JraKLgYIIRlTmNwb8/4A==",
   "success": true,
   "projectFilePath": "D:\\Github\\EventBrite\\WebMvc\\WebMvc.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sumam\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\6.0.13\\microsoft.aspnetcore.authentication.openidconnect.6.0.13.nupkg.sha512",
+    "C:\\Users\\sumam\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\sumam\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.10.0\\microsoft.identitymodel.jsonwebtokens.6.10.0.nupkg.sha512",
+    "C:\\Users\\sumam\\.nuget\\packages\\microsoft.identitymodel.logging\\6.10.0\\microsoft.identitymodel.logging.6.10.0.nupkg.sha512",
+    "C:\\Users\\sumam\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "C:\\Users\\sumam\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
+    "C:\\Users\\sumam\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
     "C:\\Users\\sumam\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
-    "C:\\Users\\sumam\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\sumam\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\sumam\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.10.0\\system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512",
+    "C:\\Users\\sumam\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

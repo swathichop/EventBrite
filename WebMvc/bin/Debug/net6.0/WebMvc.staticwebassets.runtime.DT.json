@@ -467,6 +467,14 @@
             },
             "Patterns": null
           },
+          "Business.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/Business.jpg"
+            },
+            "Patterns": null
+          },
           "b_star.png": {
             "Children": null,
             "Asset": {
@@ -622,6 +630,30 @@
             "Asset": {
               "ContentRootIndex": 0,
               "SubPath": "images/down_arrow.png"
+            },
+            "Patterns": null
+          },
+          "Event.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/Event.jpg"
+            },
+            "Patterns": null
+          },
+          "eventlogo.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/eventlogo.jpg"
+            },
+            "Patterns": null
+          },
+          "Eventslogo1.png": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/Eventslogo1.png"
             },
             "Patterns": null
           },
@@ -870,6 +902,14 @@
             "Asset": {
               "ContentRootIndex": 0,
               "SubPath": "images/s_arrow.psd"
+            },
+            "Patterns": null
+          },
+          "TheaterArts.jpg": {
+            "Children": null,
+            "Asset": {
+              "ContentRootIndex": 0,
+              "SubPath": "images/TheaterArts.jpg"
             },
             "Patterns": null
           },

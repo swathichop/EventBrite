@@ -26,3 +26,10 @@ D:\Github\EventBrite\WebMvc\obj\Debug\net6.0\WebMvc.genruntimeconfig.cache
 D:\Github\EventBrite\WebMvc\obj\Debug\net6.0\ref\WebMvc.dll
 D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Github\EventBrite\WebMvc\obj\Debug\net6.0\WebMvc.csproj.CopyComplete
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
