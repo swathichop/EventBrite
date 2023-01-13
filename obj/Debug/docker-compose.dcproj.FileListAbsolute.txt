@@ -102,3 +102,10 @@ D:\Github\EventBrite\bin\Debug\WebMvc.pdb
 D:\Github\EventBrite\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 D:\Github\EventBrite\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 D:\Github\EventBrite\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\WebMvc.deps.json
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\WebMvc.runtimeconfig.json
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\WebMvc.staticwebassets.runtime.json
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\WebMvc.exe
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\WebMvc.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\Newtonsoft.Json.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\WebMvc.pdb
