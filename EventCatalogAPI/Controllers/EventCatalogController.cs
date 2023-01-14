@@ -50,6 +50,39 @@ namespace EventCatalogAPI.Controllers
             };
             return Ok(model);
         }
+        [HttpGet("[action]/filter")]
+        public async Task<IActionResult> EventItems(
+           [FromQuery] int? EventTypeId,
+           [FromQuery] int? EventOrganizerId,
+           [FromQuery] int pageIndex = 0,
+           [FromQuery] int pageSize = 6)
+        {
+            var query = (IQueryable<EventItem>)_context.EventItems;
+            if (EventTypeId.HasValue)
+            {
+                query = query.Where(c => c.EventTypeId == EventTypeId.Value);
+            }
+            if (EventOrganizerId.HasValue)
+            {
+                query = query.Where((c) => c.EventOrganizerId == EventOrganizerId.Value);
+            }
+            var itemsCount = query.LongCountAsync();
+            var items = await query
+                                 .OrderBy(c => c.Name)
+                                 .Skip(pageIndex * pageSize)
+                                 .Take(pageSize)
+                                 .ToListAsync();
+            items = ChangePictureUrl(items);
+            var model = new PaginatedItemsViewModel
+            {
+                PageIndex = pageIndex,
+                PageSize = items.Count(),
+                Data = items,
+                Count = itemsCount.Result
+            };
+            return Ok(model);
+
+        }
 
         private List<EventItem> ChangePictureUrl(List<EventItem> items)
         {
