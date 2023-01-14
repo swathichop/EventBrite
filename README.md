@@ -13,3 +13,13 @@ http://localhost:7044/api/EventCatalog/EventTypes
 http://localhost:7044/api/EventCatalog/EventOrganizers
 http://localhost:7044/api/EventCatalog/EventItems
 http://localhost:7044/api/Eventpic/2
+
+Assignment3b:
+
+1. Integrated Webmvc client with EventCatalogAPI where we can see all the list of Events and prices, which can be filtered based on the Event Organizer and Event Type drop downs.
+2. Created TokenServiceAPI for authentication and authorization , integrated with Webmvc client
+3. A database is created to storage user names and passwords and we seed it with the user me@myemail.com.
+4. URL to be used for testing the website that shows the list of Events and the prices:
+http://localhost:7502
+5. On click of About on the home page it will authenticate and take us to the login page to provide the credentials where it will show the details related to the Token(shows the access token)
+
