@@ -29,15 +29,33 @@ services:
       dockerfile: Dockerfile
     environment:
       ConnectionString: "Data Source=tokensqlserver;Initial Catalog=TokenServiceDb;User Id=sa;Password=ProductApi123(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;"
-      MvcClient: http://localhost:7510
+      MvcClient: http://localhost:7502
     ports:
-      - "7700:80"
+      - "7650:80"
     container_name: eventbritetokenapi
     networks:
       - frontend
       - backend
     depends_on:
       - tokensqlserver
+
+  cart:
+    image: eventbrite/cartapi
+    build:
+      context: .\CartApi
+      dockerfile: Dockerfile
+    environment:
+      IdentityUrl: http://172.23.192.1:7650
+      ConnectionString: basket.data
+    ports:
+      - "7009:80"
+    container_name: eventscartapi
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - tokenserver
+      - basket.data
 
   WebMvc:
     image: eventbrite/webmvc
@@ -47,16 +65,18 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       EventCatalogUrl: http://eventcatalogapi
-      IdentityUrl: http://172.22.144.1:7700
-      CallBackUrl: http://localhost:7510
+      IdentityUrl: http://172.23.192.1:7650
+      CallBackUrl: http://localhost:7502
+      CartUrl: http://cart
     ports:
-      - "7510:80"
+      - "7502:80"
     container_name: eventwebshop
     networks:
       - frontend
     depends_on:
       - eventcatalogapi
       - tokensqlserver
+      - cart
 
 
   mssqlserver:
@@ -77,7 +97,15 @@ services:
       MSSQL_SA_PASSWORD: ProductApi123(!)
       SA_PASSWORD: ProductApi123(!)
     ports:
-      - "1458:1433"
+      - "1428:1433"
     container_name: eventstokensqlserver
+    networks:
+      - backend
+
+  basket.data:
+    image: redis
+    ports:
+      - "7050:6379"
+    container_name: basketdata
     networks:
       - backend

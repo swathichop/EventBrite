@@ -12,8 +12,8 @@ namespace WebMvc.Services
             {
                 var user = new ApplicationUser
                 {
-                    Email = claims.Claims.FirstOrDefault(x => x.Type == "Preferred_username")?.Value ?? "",
-                    Id = claims.Claims.FirstOrDefault(x => x.Type == "Preferred_userename")?.Value ?? "",
+                    Email = claims.Claims.FirstOrDefault(x => x.Type == "preferred_username")?.Value ?? "",
+                    Id = claims.Claims.FirstOrDefault(x => x.Type == "preferred_username")?.Value ?? "",
                 };
                 return user;
             }
