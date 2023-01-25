@@ -31,7 +31,7 @@ services:
       ConnectionString: "Data Source=tokensqlserver;Initial Catalog=TokenServiceDb;User Id=sa;Password=ProductApi123(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;"
       MvcClient: http://localhost:7502
     ports:
-      - "7650:80"
+      - "7900:80"
     container_name: eventbritetokenapi
     networks:
       - frontend
@@ -45,7 +45,7 @@ services:
       context: .\CartApi
       dockerfile: Dockerfile
     environment:
-      IdentityUrl: http://172.23.192.1:7650
+      IdentityUrl:http://192.168.5.150:7900
       ConnectionString: basket.data
     ports:
       - "7009:80"
@@ -57,6 +57,24 @@ services:
       - tokenserver
       - basket.data
 
+   order:
+    image: eventbrite/orderapi
+    build:
+      context: .\OrderApi
+      dockerfile: Dockerfile
+    environment:
+      IdentityUrl: http://192.168.5.150:7900
+      ConnectionString: "Data Source=ordersqlserver;Initial Catalog=OrdersDb;User Id=sa;Password=ProductApi123(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;"
+    ports:
+      - "7020:80"
+    container_name: eventsorderapi
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - tokenserver
+      - ordersqlserver
+
   WebMvc:
     image: eventbrite/webmvc
     build:
@@ -65,7 +83,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       EventCatalogUrl: http://eventcatalogapi
-      IdentityUrl: http://172.23.192.1:7650
+      IdentityUrl: http://192.168.5.150:7900
       CallBackUrl: http://localhost:7502
       CartUrl: http://cart
     ports:
@@ -83,7 +101,7 @@ services:
     image: "mcr.microsoft.com/mssql/server:latest"
     environment: 
       ACCEPT_EULA: Y
-      MSSQL_SA_PASSWORD: ProductApi(!)
+      MSSQL_SA_PASSWORD: ProductApi123(!)
     ports:
       - "1498:1433"
     container_name: eventbritesqlserver
@@ -99,6 +117,18 @@ services:
     ports:
       - "1428:1433"
     container_name: eventstokensqlserver
+    networks:
+      - backend
+
+  ordersqlserver:
+    image: "mcr.microsoft.com/mssql/server:latest"
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: ProductApi123(!)
+      SA_PASSWORD: ProductApi123(!)
+    ports:
+      - "1450:1433"
+    container_name: eventsordersqlserver
     networks:
       - backend
 
