@@ -39,3 +39,10 @@ D:\Github\EventBrite\CartApi\obj\Debug\net6.0\refint\CartApi.dll
 D:\Github\EventBrite\CartApi\obj\Debug\net6.0\CartApi.pdb
 D:\Github\EventBrite\CartApi\obj\Debug\net6.0\CartApi.genruntimeconfig.cache
 D:\Github\EventBrite\CartApi\obj\Debug\net6.0\ref\CartApi.dll
+D:\Github\EventBrite\CartApi\bin\Debug\net6.0\Autofac.dll
+D:\Github\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.dll
+D:\Github\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.Abstractions.dll
+D:\Github\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.AutofacIntegration.dll
+D:\Github\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+D:\Github\EventBrite\CartApi\bin\Debug\net6.0\RabbitMQ.Client.dll
+D:\Github\EventBrite\CartApi\bin\Debug\net6.0\System.Text.Json.dll

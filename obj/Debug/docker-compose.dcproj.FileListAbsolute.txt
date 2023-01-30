@@ -140,3 +140,8 @@ D:\Github\EventBrite\bin\Debug\OrderApi.pdb
 D:\Github\EventBrite\bin\Debug\Stripe.net.dll
 D:\Github\EventBrite\bin\Debug\System.Configuration.ConfigurationManager.dll
 D:\Github\EventBrite\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+D:\Github\EventBrite\bin\Debug\MassTransit.RabbitMqTransport.dll
+D:\Github\EventBrite\bin\Debug\MassTransit.dll
+D:\Github\EventBrite\bin\Debug\MassTransit.Abstractions.dll
+D:\Github\EventBrite\bin\Debug\RabbitMQ.Client.dll
+D:\Github\EventBrite\bin\Debug\System.Text.Json.dll

@@ -85,3 +85,9 @@ D:\Github\EventBrite\OrderApi\obj\Debug\net6.0\OrderApi.pdb
 D:\Github\EventBrite\OrderApi\obj\Debug\net6.0\OrderApi.genruntimeconfig.cache
 D:\Github\EventBrite\OrderApi\obj\Debug\net6.0\ref\OrderApi.dll
 D:\Github\EventBrite\OrderApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Github\EventBrite\OrderApi\bin\Debug\net6.0\Autofac.dll
+D:\Github\EventBrite\OrderApi\bin\Debug\net6.0\MassTransit.dll
+D:\Github\EventBrite\OrderApi\bin\Debug\net6.0\MassTransit.Abstractions.dll
+D:\Github\EventBrite\OrderApi\bin\Debug\net6.0\MassTransit.AutofacIntegration.dll
+D:\Github\EventBrite\OrderApi\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+D:\Github\EventBrite\OrderApi\bin\Debug\net6.0\RabbitMQ.Client.dll
