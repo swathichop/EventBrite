@@ -45,7 +45,7 @@ services:
       context: .\CartApi
       dockerfile: Dockerfile
     environment:
-      IdentityUrl: http://172.23.192.1:7650
+      IdentityUrl: http://192.168.80.1:7650
       ConnectionString: basket.data
     ports:
       - "7009:80"
@@ -57,6 +57,25 @@ services:
       - tokenserver
       - basket.data
 
+  order:
+    image: eventbrite/orderapi
+    build:
+      context: .\OrderApi
+      dockerfile: Dockerfile
+    environment:
+      IdentityUrl: http://192.168.80.1:7650
+      ConnectionString: "Data Source=ordersqlserver;Initial Catalog=OrdersDb;User Id=sa;Password=ProductApi123(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;"
+    ports:
+      - "7020:80"
+    container_name: eventsorderapi
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - tokenserver
+      - ordersqlserver
+
+
   WebMvc:
     image: eventbrite/webmvc
     build:
@@ -65,9 +84,12 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       EventCatalogUrl: http://eventcatalogapi
-      IdentityUrl: http://172.23.192.1:7650
+      IdentityUrl: http://192.168.80.1:7650
       CallBackUrl: http://localhost:7502
       CartUrl: http://cart
+      OrderUrl: http://order
+      StripePublicKey: pk_test_51MUeNnLonesTHfj7XohCbHfKdlUqnGA2XZ8DF0K8Cf70fz2wa7s8EF8Gd0k1gJFvGnItZ6A0qVa3Ma6TWBNdkMvx00cbAGghe0
+      StripePrivateKey: sk_test_51MUeNnLonesTHfj7zlykBYrEWn1aEgK9ltb51kfHrNgzHl03YIOke5QkDsW3MKnkKogEuNpfYtsdulR7ETYOFWlk00Hc3G6HUx
     ports:
       - "7502:80"
     container_name: eventwebshop
@@ -77,6 +99,7 @@ services:
       - eventcatalogapi
       - tokensqlserver
       - cart
+      - order
 
 
   mssqlserver:
@@ -99,6 +122,18 @@ services:
     ports:
       - "1428:1433"
     container_name: eventstokensqlserver
+    networks:
+      - backend
+
+  ordersqlserver:
+    image: "mcr.microsoft.com/mssql/server:latest"
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: ProductApi123(!)
+      SA_PASSWORD: ProductApi123(!)
+    ports:
+      - "1450:1433"
+    container_name: eventsordersqlserver
     networks:
       - backend
 

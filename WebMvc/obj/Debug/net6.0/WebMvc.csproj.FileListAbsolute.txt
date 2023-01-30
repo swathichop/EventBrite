@@ -34,3 +34,15 @@ D:\Github\EventBrite\WebMvc\obj\Debug\net6.0\refint\WebMvc.dll
 D:\Github\EventBrite\WebMvc\obj\Debug\net6.0\WebMvc.pdb
 D:\Github\EventBrite\WebMvc\obj\Debug\net6.0\WebMvc.genruntimeconfig.cache
 D:\Github\EventBrite\WebMvc\obj\Debug\net6.0\ref\WebMvc.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\Stripe.net.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Github\EventBrite\WebMvc\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

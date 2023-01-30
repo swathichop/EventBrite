@@ -132,3 +132,11 @@ D:\Github\EventBrite\bin\Debug\CartApi.pdb
 D:\Github\EventBrite\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 D:\Github\EventBrite\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 D:\Github\EventBrite\obj\Debug\docker-compose.dcproj.CopyComplete
+D:\Github\EventBrite\bin\Debug\OrderApi.deps.json
+D:\Github\EventBrite\bin\Debug\OrderApi.runtimeconfig.json
+D:\Github\EventBrite\bin\Debug\OrderApi.exe
+D:\Github\EventBrite\bin\Debug\OrderApi.dll
+D:\Github\EventBrite\bin\Debug\OrderApi.pdb
+D:\Github\EventBrite\bin\Debug\Stripe.net.dll
+D:\Github\EventBrite\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Github\EventBrite\bin\Debug\System.Security.Cryptography.ProtectedData.dll
