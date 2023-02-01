@@ -49,8 +49,8 @@ namespace WebMvc.Services
         public async Task ClearCart(ApplicationUser user)
         {
             var token = await GetUserTokenAsync();
-            var cleabBasketUri = APIPaths.Basket.CleanBasket(_baseUrl, user.Email);
-            await _apiClient.DeleteAsync(cleabBasketUri, token);
+            var cleanBasketUri = APIPaths.Basket.CleanBasket(_baseUrl, user.Email);
+            await _apiClient.DeleteAsync(cleanBasketUri, token);
         }
 
         public async Task<Cart> GetCart(ApplicationUser user)
