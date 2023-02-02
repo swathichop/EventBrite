@@ -1,7 +1,9 @@
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using OrderAPI.Data;
+using RabbitMQ.Client;
 using System.IdentityModel.Tokens.Jwt;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,11 +34,39 @@ builder.Services.AddAuthentication(options =>
     };
     options.Audience = "order";
 });
+
+builder.Services.AddMassTransit(cfg =>
+{
+    cfg.AddBus(provider =>
+    {
+        return Bus.Factory.CreateUsingRabbitMq(rmq =>
+        {
+            rmq.Host(new Uri("rabbitmq://rabbitmq"), "/", h =>
+            {
+                h.Username("guest");
+                h.Password("guest");
+            });
+            rmq.ExchangeType = ExchangeType.Fanout;
+            MessageDataDefaults.ExtraTimeToLive = TimeSpan.FromDays(1);
+        });
+
+    });
+});
+
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var serviceProviders = scope.ServiceProvider;
+    var context = serviceProviders.GetRequiredService<OrdersContext>();
+    MigrateDatabase.EnsureCreated(context);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
