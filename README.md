@@ -29,8 +29,7 @@ Assignment 3c:
 2. We used Redis for in - memory database for CartApi to store items in cart. 
 3. For payments in order we used Stripe.
 4. RabbitMq is used for sending messages between microservices. In our project Order is the publisher of the message and Cart is the subscriber.
-5. Url for testing our Event website : http://localhost:7502. After logging in we can add events to the Cart. Follwed by check out to place an order  payment.
+5. Url for testing our Event website : http://localhost:7502. After logging in we can add events to the Cart. Followed by check out to place an order  payment.
    we enter user shipping details followed by testing credit card details.
-   
-  Here is the short video about our project:  https://www.youtube.com/watch?v=M7FwYyBjY2g
 6. Once the payment is completed, we can check the same in your stripe account. The cart will be empty as well.
+7. Here is the short video about our project:  https://www.youtube.com/watch?v=M7FwYyBjY2g
