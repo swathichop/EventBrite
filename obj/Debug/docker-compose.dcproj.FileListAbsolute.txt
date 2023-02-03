@@ -233,3 +233,16 @@ C:\Pivot\Projects\EventBrite\bin\Debug\MassTransit.RabbitMqTransport.dll
 C:\Pivot\Projects\EventBrite\bin\Debug\MassTransit.dll
 C:\Pivot\Projects\EventBrite\bin\Debug\MassTransit.Abstractions.dll
 C:\Pivot\Projects\EventBrite\bin\Debug\RabbitMQ.Client.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\OrderAPI.deps.json
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\OrderAPI.runtimeconfig.json
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\OrderAPI.exe
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\OrderAPI.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\Stripe.net.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\System.Text.Json.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\MassTransit.RabbitMqTransport.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\MassTransit.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\MassTransit.Abstractions.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\RabbitMQ.Client.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\bin\Debug\OrderAPI.pdb

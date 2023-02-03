@@ -182,3 +182,10 @@ C:\Pivot\Projects\EventBrite\OrderAPI\bin\Debug\net6.0\MassTransit.Abstractions.
 C:\Pivot\Projects\EventBrite\OrderAPI\bin\Debug\net6.0\MassTransit.AutofacIntegration.dll
 C:\Pivot\Projects\EventBrite\OrderAPI\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
 C:\Pivot\Projects\EventBrite\OrderAPI\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\OrderAPI\bin\Debug\net6.0\Autofac.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\OrderAPI\bin\Debug\net6.0\MassTransit.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\OrderAPI\bin\Debug\net6.0\MassTransit.Abstractions.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\OrderAPI\bin\Debug\net6.0\MassTransit.AutofacIntegration.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\OrderAPI\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\OrderAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\OrderAPI\bin\Debug\net6.0\RabbitMQ.Client.dll

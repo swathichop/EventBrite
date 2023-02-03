@@ -56,7 +56,7 @@ namespace WebMvc.Controllers
                 Amount = (int)order.OrderTotal * 100,
                 Currency = "usd",
                 Source = order.StripeToken,
-                Description = $"JewelsonContainer Order payment {order.UserName}",
+                Description = $"EventBrite Order payment {order.UserName}",
                 ReceiptEmail = order.UserName
             };
 

@@ -44,8 +44,14 @@ services:
     build:
       context: .\CartApi
       dockerfile: Dockerfile
+    logging:
+      driver: "json-file"
+      options: {
+        max-size: "200k",
+        max-file: "10"
+      }
     environment:
-      IdentityUrl: http://192.168.0.10:7900
+      IdentityUrl: http://192.168.5.150:7900
       ConnectionString: basket.data
     ports:
       - "7009:80"
@@ -63,8 +69,14 @@ services:
     build:
       context: .\OrderApi
       dockerfile: Dockerfile
+    logging:
+      driver: "json-file"
+      options: {
+        max-size: "200k",
+        max-file: "10"
+      }
     environment:
-      IdentityUrl: http://192.168.0.10:7900
+      IdentityUrl: http://192.168.5.150:7900
       ConnectionString: "Data Source=ordersqlserver;Initial Catalog=OrdersDb;User Id=sa;Password=ProductApi123(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;"
     ports:
       - "7021:80"
@@ -82,15 +94,23 @@ services:
     build:
       context: .\WebMvc
       dockerfile: Dockerfile
+    logging:
+      driver: "json-file"
+      options: {
+        max-size: "200k",
+        max-file: "10"
+      }
+       
+     
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       EventCatalogUrl: http://eventcatalogapi
-      IdentityUrl: http://192.168.0.10:7900
+      IdentityUrl: http://192.168.5.150:7900
       CallBackUrl: http://localhost:7502
       CartUrl: http://cart
       Orderurl: http://order
-      StripePublicKey: pk_test_51MWCorIYUWAtVitTZGCTfwwdJevXCLfOIXdx1B4aM79JNQQCwbJtj5lJ7KlHRs6iqj0Cazpw2syAteActWanIkRv00UgmoFQFH
-      StripePrivateKey: sk_test_51MWCorIYUWAtVitT0fFaWH27ZC0WprqqEVJKTJ6KijoYtHTMM4EoTltIJm8SBn0ZEsos7Ks8QmIcF38K5BAj3cT300G21VRTZ9
+      StripePublicKey:  pk_test_51MTyUDHY3OX11gRaXmtt8uFyMdidrrM3qkjYkd4RZUlxoZCXiKooRWCI7DhzxbMxucYtbM9d1djN9ltaWI3lTd6B00okMNBNjM
+      StripePrivateKey: sk_test_51MTyUDHY3OX11gRaoEYLtdM4oFufrBiHjXUP0tosKenjunBdpbrQAxBKQiskwy4ati5B0eufLbFtbd2kavsSXbhh001ZJSkfz3 
     ports:
       - "7502:80"
     container_name: eventwebshop

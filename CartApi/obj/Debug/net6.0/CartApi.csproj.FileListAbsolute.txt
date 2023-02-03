@@ -133,3 +133,10 @@ C:\Pivot\Projects\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.AutofacIntegra
 C:\Pivot\Projects\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
 C:\Pivot\Projects\EventBrite\CartApi\bin\Debug\net6.0\RabbitMQ.Client.dll
 C:\Pivot\Projects\EventBrite\CartApi\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\CartApi\bin\Debug\net6.0\Autofac.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.Abstractions.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.AutofacIntegration.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\CartApi\bin\Debug\net6.0\MassTransit.RabbitMqTransport.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\CartApi\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\srava\source\repos\Team_3\EventBrite\CartApi\bin\Debug\net6.0\System.Text.Json.dll
