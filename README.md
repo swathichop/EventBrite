@@ -26,7 +26,7 @@ http://localhost:7502
 Assignment 3c:
 
 1. Created Cart, Order Microservices and integrated with web MVC client.
-2. we userd Redis for in - memory database for CartApi to store items in cart. 
+2. We used Redis for in - memory database for CartApi to store items in cart. 
 3. For payments in order we used Stripe.
 4. RabbitMq is used for sending messages between microservices. In our project Order is the publisher of the message and Cart is the subscriber.
 5. Url for testing our Event website : http://localhost:7502. After logging in we can add events to the Cart. Follwed by check out to place an order  payment.
