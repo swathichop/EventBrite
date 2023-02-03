@@ -84,6 +84,7 @@ services:
     environment:
       ACCEPT_EULA: "true"
       MSSQL_SA_PASSWORD: ProductApi(!)
+      SA_PASSWORD: ProductApi(!)
     image: mcr.microsoft.com/mssql/server:latest
     networks:
       backend: null

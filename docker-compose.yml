@@ -8,7 +8,7 @@ services:
   eventcatalogapi:
     image: eventbrite/eventcatalogapi
     build:
-      context: .\EventCatalogAPI/
+      context: .\EventCatalogAPI
       dockerfile: Dockerfile
     environment:
       ConnectionString: "Data Source=mssqlserver;Initial Catalog=EventCatalogDB;User Id=sa;Password=ProductApi123(!);Connect Timeout=30;TrustServerCertificate=false;Encrypt=false;"

@@ -45,7 +45,6 @@ namespace WebMvc.Services
             return items;
         }
 
-
         public async Task<IEnumerable<SelectListItem>> GetEventOrganizersAsync()
         {
             var organizersUri = APIPaths.EventCatalog.GetAllEventOrganizers(_baseUrl);

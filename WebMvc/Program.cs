@@ -72,11 +72,21 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseAuthentication();
+<<<<<<< HEAD
 app.UseAuthorization();
 
 //app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=EventCatalog}/{action=Index}");
+=======
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=EventCatalog}/{action=Index}");
+//app.MapRazorPages();
+>>>>>>> origin/main
 
 app.Run();
