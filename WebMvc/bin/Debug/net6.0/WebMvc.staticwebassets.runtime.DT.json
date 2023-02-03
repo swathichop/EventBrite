@@ -641,11 +641,11 @@
             },
             "Patterns": null
           },
-          "EventLogo.jpg": {
+          "eventlogo.jpg": {
             "Children": null,
             "Asset": {
               "ContentRootIndex": 0,
-              "SubPath": "images/EventLogo.jpg"
+              "SubPath": "images/eventlogo.jpg"
             },
             "Patterns": null
           },

@@ -4,42 +4,74 @@
     {
         public static class EventCatalog
         {
-            public static string GetAllEventTypes(string baseUrl)
+            public static string GetAllEventTypes(string baseUri)
             {
-                return $"{baseUrl}/eventtypes";
-            }
-            public static string GetAllEventOrganizers(string baseUrl)
-            {
-                return $"{baseUrl}/eventorganizers";
+                return $"{baseUri}/eventTypes";
             }
 
-            public static string GetAllEventItems(string baseUrl, int page, int take, int? eventorganizer, int? eventtype
-                )
+            public static string GetAllEventOrganizers(string baseUri)
             {
-                // return $"{baseUrl}/eventitems?pageIndex={page}&pageSize={take}"; 
+                return $"{baseUri}/eventOrganizers";
+            }
+
+            public static string GetAllEventItems(string baseUri, int page, int take, int? organizer, int? type)
+            {
                 var preUri = string.Empty;
                 var filterQs = string.Empty;
-                if (eventorganizer.HasValue)
+                if(organizer.HasValue)
                 {
-                    filterQs = $"eventOrganizerId={eventorganizer.Value}";
+                    filterQs = $"eventOrganizerId={organizer.Value}";
                 }
-                if (eventtype.HasValue)
+                if(type.HasValue)
                 {
-                    filterQs = (filterQs == string.Empty) ? $"EventTypeId={eventtype.Value}" :
-                         $"{filterQs}&eventTypeId={eventtype.Value}";
+                    filterQs = (filterQs == string.Empty) ? $"eventCategoryId={type.Value}" :
+                        $"{filterQs}&eventCategoryId={type.Value}";
                 }
-                if (string.IsNullOrEmpty(filterQs))
+                if(string.IsNullOrEmpty(filterQs))
                 {
-                    preUri = $"{baseUrl}/eventitems?pageIndex={page}&pageSize={take}";
+                    preUri =  $"{baseUri}/eventItems?pageIndex={page}&pageSize={take}";
                 }
                 else
                 {
-                    preUri = $"{baseUrl}/eventitems/filter?pageIndex={page}&pageSize={take}&{filterQs}";
+                    preUri = $"{baseUri}/eventItems/filter?pageIndex={page}&pageSize={take}&{filterQs}";
                 }
                 return preUri;
+
+
+                
             }
         }
-        
-       
+
+
+        public static class Basket
+        {
+            public static string GetBasket(string baseUri,string basketId)
+            {
+                return $"{baseUri}/{basketId}";
+            }
+
+            public static string UpdateBasket(string baseUri)
+            {
+                return baseUri;
+            }
+
+            public static string CleanBasket(string baseUri, string basketId)
+            {
+                return $"{baseUri}/{basketId}";
+            }
+        }
+        public static class Order
+        {
+            public static string GetOrder(string baseUri, string orderId)
+            {
+                return $"{baseUri}/{orderId}";
+            }
+            public static string AddNewOrder(string baseUri)
+            {
+                return $"{baseUri}/new";
+            }
+
+        }
+
     }
 }

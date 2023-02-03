@@ -23,10 +23,10 @@
 
     </environment>
     @*<environment exclude="Development">
-    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-    asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-    asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>*@
 </head>
 <body>
@@ -36,20 +36,19 @@
                 <section class="col-lg-7 col-md-6 col-xs-12">
                     <a class="navbar-brand" routerLink="catalog">
                         <a asp-area="" asp-controller="EventCatalog" asp-action="Index">
-                            <img src="~/images/EventLogo.jpg" />
+                            <img src="~/images/eventlogo.jpg" />
                         </a>
                     </a>
                 </section>
-                @*               @await Html.PartialAsync("_LoginPartial")
-                *@
+               @await Html.PartialAsync("_LoginPartial")
             </article>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-
+                    
                     <li><a asp-area="" asp-controller="EventCatalog" asp-action="About">About</a></li>
-
+                   
                 </ul>
-
+                
             </div>
         </div>
     </header>
@@ -61,18 +60,18 @@
                 <article class="row">
 
                     <section class="col-sm-6">
-                        <img class="esh-app-footer-brand" src="~/images/EventLogo.jpg" />
+                        <img class="esh-app-footer-brand" src="~/images/eventlogo.jpg" />
                     </section>
 
                     <section class="col-sm-6">
-                        <img class="esh-app-footer-text hidden-xs" src="~/images/main_footer_text.png" width="335" height="26" alt="footer text image" />
+                     @*   <img class="esh-app-footer-text hidden-xs" src="~/images/main_footer_text.png" width="335" height="26" alt="footer text image" /> *@
                     </section>
 
                 </article>
             </div>
         </footer>
     </div>
-
+   
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

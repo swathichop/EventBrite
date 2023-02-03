@@ -1,6 +1,6 @@
-﻿@{
+﻿@model WebMvc.ViewModels.EventCatalogIndexViewModel
+@{
     ViewData["Title"] = "EventCatalog";
-    @model WebMvc.ViewModels.EventIndexViewModel
 }
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
@@ -14,7 +14,7 @@
             <img src="~/images/Event.jpg" alt="ASP.NET" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                   Now Its Your Turn, Book Your Events 
+                    Now is your time to relax and enjoy.
                 </p>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <img src="~/images/TheaterArts.jpg" alt="Visual Studio" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Looking To Relax,Check For Music And Performances.
+                    Music and Dance is Therapy.
                 </p>
             </div>
         </div>
@@ -30,7 +30,7 @@
             <img src="~/images/Business.jpg" alt="Package Management" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Go For Something Related To Business
+                    Book your events here.
                 </p>
             </div>
         </div>
@@ -50,25 +50,25 @@
     <div class="container">
         <form asp-action="Index" asp-controller="EventCatalog" method="post">
             <label class="esh-catalog-label" data-title="Organizer">
-                <select asp-for="@Model.EventOrganizerFilterApplied" asp-items="@Model.EventOrganizers" class="esh-catalog-filter"></select>
+                <select asp-for="@Model.OrganizersFilterApplied" asp-items="@Model.Organizers" class="esh-catalog-filter"></select>
             </label>
-            <label class="esh-catalog-label" data-title="Type">
-                <select asp-for="@Model.EventTypeFilterApplied" asp-items="@Model.EventTypes" class="esh-catalog-filter"></select>
+            <label class="esh-catalog-label" data-title="type">
+                <select asp-for="@Model.CategoriesFilterApplied" asp-items="@Model.Categories" class="esh-catalog-filter"></select>
             </label>
             <input class="esh-catalog-send" type="image" src="~/images/arrow-right.svg" />
         </form>
     </div>
 </section>
 <div class="container">
-    @if (Model.EventItems.Count() > 0)
+    @if (Model.Events.Count() > 0)
     {
         @Html.Partial("_pagination", Model.PaginationInfo)
 
         <div class="esh-catalog-items row">
-            @foreach (var Event in Model.EventItems)
+            @foreach (var catalogItem in Model.Events)
             {
-                <div class="esh-catalog-items col-md-4">
-                    @Html.Partial("_product", Event)
+                <div class="esh-catalog-item col-md-4">
+                    @Html.Partial("_product", catalogItem)
                 </div>
             }
         </div>
@@ -82,3 +82,4 @@
         </div>
     }
 </div>
+

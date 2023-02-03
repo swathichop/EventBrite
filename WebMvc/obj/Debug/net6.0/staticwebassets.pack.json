@@ -121,8 +121,8 @@
       "PackagePath": "staticwebassets\\images\\Event.jpg"
     },
     {
-      "Id": "C:\\Pivot\\Projects\\EventBrite\\WebMvc\\wwwroot\\images\\EventLogo.jpg",
-      "PackagePath": "staticwebassets\\images\\EventLogo.jpg"
+      "Id": "C:\\Pivot\\Projects\\EventBrite\\WebMvc\\wwwroot\\images\\Eventslogo1.png",
+      "PackagePath": "staticwebassets\\images\\Eventslogo1.png"
     },
     {
       "Id": "C:\\Pivot\\Projects\\EventBrite\\WebMvc\\wwwroot\\images\\Logo-4.png",
@@ -299,6 +299,10 @@
     {
       "Id": "C:\\Pivot\\Projects\\EventBrite\\WebMvc\\wwwroot\\images\\down_arrow.png",
       "PackagePath": "staticwebassets\\images\\down_arrow.png"
+    },
+    {
+      "Id": "C:\\Pivot\\Projects\\EventBrite\\WebMvc\\wwwroot\\images\\eventlogo.jpg",
+      "PackagePath": "staticwebassets\\images\\eventlogo.jpg"
     },
     {
       "Id": "C:\\Pivot\\Projects\\EventBrite\\WebMvc\\wwwroot\\images\\f_icon.png",

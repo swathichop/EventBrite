@@ -50,28 +50,28 @@ namespace EventCatalogAPI.Controllers
             };
             return Ok(model);
         }
+
         [HttpGet("[action]/filter")]
         public async Task<IActionResult> EventItems(
-           [FromQuery] int? EventTypeId,
-           [FromQuery] int? EventOrganizerId,
-           [FromQuery] int pageIndex = 0,
-           [FromQuery] int pageSize = 6)
+            [FromQuery] int? eventCategoryId,
+            [FromQuery] int? eventOrganizerId,
+           [FromQuery] int pageIndex = 0, [FromQuery] int pageSize = 6
+            )
         {
             var query = (IQueryable<EventItem>)_context.EventItems;
-            if (EventTypeId.HasValue)
+            if(eventCategoryId.HasValue)
             {
-                query = query.Where(c => c.EventTypeId == EventTypeId.Value);
+                query = query.Where(e => e.EventTypeId == eventCategoryId.Value);
             }
-            if (EventOrganizerId.HasValue)
+            if(eventOrganizerId.HasValue)
             {
-                query = query.Where((c) => c.EventOrganizerId == EventOrganizerId.Value);
+               query =  query.Where(e => e.EventTypeId == eventOrganizerId.Value);
             }
             var itemsCount = query.LongCountAsync();
-            var items = await query
-                                 .OrderBy(c => c.Name)
-                                 .Skip(pageIndex * pageSize)
-                                 .Take(pageSize)
-                                 .ToListAsync();
+            var items = await query.OrderBy(c => c.Name)
+                                            .Skip(pageIndex * pageSize)
+                                            .Take(pageSize)
+                                             .ToListAsync();
             items = ChangePictureUrl(items);
             var model = new PaginatedItemsViewModel
             {
@@ -81,7 +81,6 @@ namespace EventCatalogAPI.Controllers
                 Count = itemsCount.Result
             };
             return Ok(model);
-
         }
 
         private List<EventItem> ChangePictureUrl(List<EventItem> items)

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebMvc.Services;
 using WebMvc.ViewModels;
 
@@ -8,21 +7,21 @@ namespace WebMvc.Controllers
 {
     public class EventCatalogController : Controller
     {
-        private readonly IEventCatalogService _service;
-        public EventCatalogController(IEventCatalogService service)
+        private readonly IEventCalatlogService _service;
+        public EventCatalogController(IEventCalatlogService service)
         {
             _service = service;
         }
-    
-        public async Task<IActionResult> Index( int? page,int? eventorganizerFilterApplied, int? eventtypeFilterApplied)
+
+        public async Task<IActionResult> Index(int? page, int? categoriesFilterApplied, int? organizersFilterapplied)
         {
             var itemsOnPage = 6;
-            var events = await _service.GetEventsAsync(page ?? 0, itemsOnPage, eventorganizerFilterApplied, eventtypeFilterApplied);
-            var vm = new EventIndexViewModel
+           var events= await  _service.GetEventsAsync(page ?? 0, itemsOnPage,organizersFilterapplied, categoriesFilterApplied);
+            var vm = new EventCatalogIndexViewModel
             {
-                EventOrganizers = await _service.GetEventOrganizersAsync(),
-                EventTypes = await _service.GetEventTypesAsync(),
-                EventItems = events.Data,
+                Categories = await _service.GetEventCategoriesAsync(),
+                Organizers = await _service.GetEventOrganizersAsync(),
+                Events = events.Data,
                 PaginationInfo = new PaginationInfo
                 {
                     ActualPage = events.PageIndex,
@@ -30,12 +29,12 @@ namespace WebMvc.Controllers
                     ItemsPerPage = events.PageSize,
                     TotalPages = (int)Math.Ceiling((decimal)events.Count / itemsOnPage)
                 },
-                EventOrganizerFilterApplied = eventorganizerFilterApplied,
-                EventTypeFilterApplied = eventtypeFilterApplied
+                CategoriesFilterApplied = categoriesFilterApplied,
+                OrganizersFilterApplied = organizersFilterapplied
             };
-
             return View(vm);
         }
+
 
         [Authorize]
         public IActionResult About()

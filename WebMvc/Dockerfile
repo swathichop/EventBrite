@@ -13,7 +13,7 @@ RUN dotnet restore "WebMvc.csproj"
 RUN dotnet build "WebMvc.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebMvc.csproj" -c Release -o /app/publish 
+RUN dotnet publish "WebMvc.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 RUN sed -i 's/DEFAULT@SECLEVEL=2/DEFAULT@SECLEVEL=1/g' /etc/ssl/openssl.cnf
 

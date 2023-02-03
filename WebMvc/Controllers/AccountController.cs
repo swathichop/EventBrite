@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using System.Diagnostics;
 using System.Security.Claims;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
 namespace WebMvc.Controllers
 {
@@ -31,7 +30,7 @@ namespace WebMvc.Controllers
 
                 ViewData["id_token"] = idToken;
             }
-            // "Catalog" because UrlHelper doesn't support nameof() for +
+            // "Catalog" because UrlHelper doesn't support nameof() for controllers
             // https://github.com/aspnet/Mvc/issues/5853
             return RedirectToAction(nameof(EventCatalogController.About), "EventCatalog");
         }

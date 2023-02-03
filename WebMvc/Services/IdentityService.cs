@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Security.Principal;
 using WebMvc.Models;
 
@@ -20,8 +18,10 @@ namespace WebMvc.Services
                 return user;
             }
 
-            throw new ArgumentException(message: "The principal must be a claimsprincipal",
+            throw new ArgumentException(message: "The prinipal must be a claimsprincipal",
                 paramName: nameof(principal));
         }
+
+        
     }
 }

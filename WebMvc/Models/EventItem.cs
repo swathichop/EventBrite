@@ -19,7 +19,8 @@
         public int TicketsAvailable { get; set; }
         public int EventTypeId { get; set; }
         public int EventOrganizerId { get; set; }
-        public string  EventType { get; set; }
-        public string  EventOrganizer { get; set; }
+        public string EventType { get; set; }
+        public string EventOrganizer  { get; set; }
+
     }
 }

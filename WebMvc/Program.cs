@@ -7,12 +7,21 @@ using WebMvc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
+
+
+
 builder.Services.AddControllersWithViews();
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IHttpClient, CustomHttpClient>();
-builder.Services.AddTransient<IEventCatalogService, EventCatalogService>();
+builder.Services.AddTransient<IEventCalatlogService, EventCatalogService>();
 builder.Services.AddTransient<IIdentityService<ApplicationUser>, IdentityService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddTransient<ICartService, CartService>();
+builder.Services.AddTransient<IOrderService, OrderService>();
+
+
 var identityUrl = configuration["IdentityUrl"];
 var callBackUrl = configuration["CallBackUrl"];
 
@@ -63,6 +72,14 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseAuthentication();
+<<<<<<< HEAD
+app.UseAuthorization();
+
+//app.MapRazorPages();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=EventCatalog}/{action=Index}");
+=======
 
 app.UseAuthorization();
 
@@ -70,5 +87,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=EventCatalog}/{action=Index}");
 //app.MapRazorPages();
+>>>>>>> origin/main
 
 app.Run();
